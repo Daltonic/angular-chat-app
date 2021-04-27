@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-chat-app-26e73": {
+      "hosting": {
+        "angular-chat-app": [
+          "angular-chat-app-26e73"
+        ]
+      }
+    }
+  }
+}
