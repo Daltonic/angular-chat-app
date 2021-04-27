@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  loading: boolean = false
+
   constructor() { }
+
+  public submit(form): void {
+    console.log(form)
+  }
 
   ngOnInit(): void {
   }

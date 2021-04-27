@@ -1,1 +1,59 @@
-<p>register works!</p>
+<div class="app">
+  <div class="login-page">
+    <div class="form">
+      <img class="header__logo" src="/assets/logo.svg" alt="youtube logo" />
+      <form
+        class="login-form"
+        class="login-form"
+        #loginForm="ngForm"
+        (ngSubmit)="submit(loginForm.value)"
+      >
+        <input
+          type="text"
+          placeholder="Fullname"
+          required
+          minlength="3"
+          ngModel
+          name="fullname"
+          #fullname="ngModel"
+          id="fullname"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          minlength="3"
+          ngModel
+          name="email"
+          #email="ngModel"
+          id="email"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          minlength="6"
+          ngModel
+          name="password"
+          #password="ngModel"
+          id="password"
+        />
+        <button
+          type="submit"
+          [style]="
+            !loginForm.valid || loading
+              ? 'background-color: rgb(147 218 165);'
+              : ''
+          "
+          type="submit"
+          [disabled]="!loginForm.valid || loading"
+        >
+          {{ loading ? "Registering..." : "Register" }}
+        </button>
+        <p class="message">
+          Already registered? <a [routerLink]="['/login']">Sign In</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
