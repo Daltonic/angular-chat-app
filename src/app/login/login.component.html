@@ -1,1 +1,49 @@
-<p>login works!</p>
+<div class="login-page">
+    <div class="form">
+      <img
+        class="header__logo"
+        src="/assets/logo.svg"
+        alt="youtube logo"
+      />
+      <form
+        class="login-form"
+        #loginForm="ngForm"
+        (ngSubmit)="submit(loginForm.value)"
+      >
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          minlength="3"
+          ngModel
+          name="email"
+          #email="ngModel"
+          id="email"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          minlength="6"
+          ngModel
+          name="password"
+          #password="ngModel"
+          id="password"
+        />
+        <button
+          type="submit"
+          [style]="
+            !loginForm.valid || loading
+              ? 'background-color: rgb(147 218 165);'
+              : ''
+          "
+          [disabled]="!loginForm.valid || loading"
+        >
+          {{ loading ? "Logging..." : "login" }}
+        </button>
+        <p class="message">
+          Not registered? <a [routerLink]="['/register']">Create an account</a>
+        </p>
+      </form>
+    </div>
+  </div>
