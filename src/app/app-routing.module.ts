@@ -10,11 +10,18 @@ const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 import { ChatComponent } from './chat/chat.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component'
 
 const routes: Routes = [
   {
     path: '',
     component: ChatComponent,
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectUnauthorizedToLogin },
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
     canActivate: [AngularFireAuthGuard],
     data: { authGuardPipe: redirectUnauthorizedToLogin },
   },
