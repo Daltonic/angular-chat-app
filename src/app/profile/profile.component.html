@@ -1,1 +1,59 @@
-<p>profile works!</p>
+<div class="app">
+  <div class="login-page">
+    <div class="form">
+      <img class="header__logo" src="/assets/logo.svg" alt="logo" />
+      <form
+        class="login-form"
+        #profileForm="ngForm"
+        (ngSubmit)="submit(profileForm)"
+      >
+        <input
+          type="text"
+          placeholder="Fullname"
+          required
+          minlength="3"
+          [ngModel]="user?.displayName"
+          name="fullname"
+          #fullname="ngModel"
+          id="fullname"
+          disabled
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          minlength="3"
+          [ngModel]="user?.email"
+          name="email"
+          #email="ngModel"
+          id="email"
+          disabled
+        />
+        <input
+          placeholder="Avatar"
+          required
+          minlength="3"
+          [ngModel]="user?.photoURL"
+          name="avatar"
+          #Avatar="ngModel"
+          id="avatar"
+        />
+        <button
+          type="submit"
+          [style]="
+            !profileForm.valid || loading
+              ? 'background-color: rgb(147 218 165);'
+              : ''
+          "
+          type="submit"
+          [disabled]="!profileForm.valid || loading"
+        >
+          {{ loading ? "Updating..." : "Update" }}
+        </button>
+        <p class="message">
+          Back to chat page? <a [routerLink]="['/']">Click here</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
