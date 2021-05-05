@@ -20,7 +20,6 @@ import { CometChatUI } from '../cometchat-pro-angular-ui-kit/CometChatWorkspace/
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    CometChatUI
   ],
   imports: [
     BrowserModule,
@@ -28,6 +27,7 @@ import { CometChatUI } from '../cometchat-pro-angular-ui-kit/CometChatWorkspace/
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    CometChatUI
   ],
   providers: [],
   bootstrap: [AppComponent]
