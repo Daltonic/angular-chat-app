@@ -38,6 +38,17 @@
           #Avatar="ngModel"
           id="avatar"
         />
+
+        <select name="theme" [ngModel]="''" #theme="ngModel" id="theme" required>
+          <option value="" selected>Select Theme</option>
+          <option value="aliceblue">Alice Blue</option>
+          <option value="antiquewhite">Antique White</option>
+          <option value="ghostwhite">Ghost White</option>
+          <option value="mistyrose">Misty Rose</option>
+          <option value="black">Black</option>
+          <option value="white">White</option>
+        </select>
+
         <button
           type="submit"
           [style]="

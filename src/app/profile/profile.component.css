@@ -2,7 +2,7 @@
 
 .login-page {
   width: 360px;
-  padding: 8% 0 0;
+  padding: 6% 0 0;
   margin: auto;
 }
 .form {
@@ -15,7 +15,8 @@
   text-align: center;
   box-shadow: 0 0 5px 0 rgb(0 0 0 / 5%), 0 5px 5px 0 rgb(0 0 0 / 15%);
 }
-.form input {
+.form input,
+.form select {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
