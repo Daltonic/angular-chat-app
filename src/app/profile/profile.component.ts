@@ -30,6 +30,11 @@ export class ProfileComponent implements OnInit {
       this.auth.authState.subscribe((authState) => {
         authState.updateProfile({photoURL})
         .then(() => this.setProfile(photoURL, theme))
+        .catch((error) => {
+          console.log(error.message)
+          alert(error.message)
+          this.loading = false
+        })
       });
     }
   }
@@ -44,8 +49,11 @@ export class ProfileComponent implements OnInit {
 
     CometChat.updateUser(user, authKey)
     .then(() => this.route.navigate(['']))
-    .catch((error) => console.log(error))
-    .finally(() => this.loading = false);
+    .catch((error) => {
+      console.log(error.message)
+      alert(error.message)
+      this.loading = false
+    });
   }
 
 }
