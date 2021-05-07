@@ -23,6 +23,7 @@ export class LoginComponent {
       .then((res) => this.loginCometChat(res.user))
       .catch((error) => {
         console.log(error);
+        alert(error.message);
         this.loading = false;
       });
   }

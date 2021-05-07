@@ -32,6 +32,7 @@ export class RegisterComponent {
       })
       .catch((error) => {
         console.log(error);
+        alert(error.message);
         this.loading = false;
       });
   }
