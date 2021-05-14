@@ -41,7 +41,7 @@ To run the demo follow these steps:
     };
   ```
 10. Create a file called **app.config.ts** in the **src** folder of your project.
-10. Import and inject your secret keys in the **app.config.ts** file containing your comet Chat and Firebase in this manner.
+10. Import and inject your secret keys in the **app.config.ts** file containing your CometChat and Firebase in this manner.
   ```ts    
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
@@ -65,7 +65,7 @@ To run the demo follow these steps:
   ```
 11. Copy the same settings into the "environment.prod.ts" as well.
 12. Make sure to exclude **app.config.ts** in your gitIgnore file from being exposed online.
-13. Run the following command to install the comet chat SDK.
+13. Run the following command to install the CometChat SDK.
 
 ```sh
     npm install
