@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component'
 import { RegisterComponent } from './register/register.component'
 import { ProfileComponent } from './profile/profile.component'
 import { CometChatUI } from '../cometchat-pro-angular-ui-kit/CometChatWorkspace/projects/angular-chat-ui-kit/src/components/CometChatUI/CometChat-Ui/cometchat-ui.module'
+import { CometChatUserListWithMessages } from '../cometchat-pro-angular-ui-kit/CometChatWorkspace/projects/angular-chat-ui-kit/src/components/Users/CometChat-user-list-with-messages/cometchat-user-list-with-messages.module'
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CometChatUI } from '../cometchat-pro-angular-ui-kit/CometChatWorkspace/
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    CometChatUserListWithMessages,
     CometChatUI
   ],
   providers: [],
